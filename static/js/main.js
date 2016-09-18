@@ -3,7 +3,6 @@ $(function () {
     $.material.init();
 	
 	var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec',];
-	
 	function checkTime(i) {
         return (i < 10) ? "0" + i : i;
     }
@@ -23,6 +22,37 @@ $(function () {
 		t = setTimeout(function () {
             startTime()}, 500);
     }
-    startTime();	
+    startTime();
+
+	(function worker() {
+		$.ajax({
+			url: '/smartbytes', 
+			success: function(data) {
+				$('#pct_left').html(data.remaining_pct + "% Left");
+			},
+			complete: function() {
+				// Schedule the next request when the current one's complete
+				//Refresh every 1hr
+				setTimeout(worker, 3600000);
+			}
+		});
+	})();
+
+	(function worker() {
+		$.ajax({
+			url: '/weather',
+			success: function(data) {
+				$('#curr_temp').html(data.temperature + "&deg;C");
+			},
+			complete: function() {
+				// Schedule the next request when the current one's complete
+				//Refresh every 2hr
+				setTimeout(worker, 7200000);
+			}
+		});
+	})();
+
+
+
 	
 });
