@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.5, maximum-scale=1, user-scalable=no">
+        <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">     
+        <link type="text/css" rel="stylesheet" href="css/bootstrap-material-design.min.css">
+        <link type="text/css" rel="stylesheet" href="css/font-awesome.min.css">
+        <link type="text/css" rel="stylesheet" href="css/weather-icons.min.css">        
+        <link type="text/css" rel="stylesheet" href="css/main.css">
+        <script src="js/jquery-1.10.2.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/material.min.js"></script>
+        <script src="js/main.js"></script>
+    </head>
+    <body>
+        <main>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="jumbotron">
+                            <h1><div id="time"></div></h1>
+                            <p><a class="btn btn-primary btn-lg">Thursday Sep, 18</a></p>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                       <div class="jumbotron" style="">
+                            <h1><i class="wi wi-day-cloudy"></i> 26&deg;C</h1>
+                            <div align="right">
+                                <p>22&deg; | 29&deg;</p>
+                            </div> 
+                            <p>Forecast:</p>
+                             <div>
+                                 <div>
+                                    <span> Tomorrow: 22&deg; | 29&deg; | <i class="wi wi-day-cloudy"></i></span>
+                                 </div>
+                                 <div>
+                                    <span> Tuesday: 22&deg; | 29&deg; | <i class="wi wi-day-cloudy"></i></span>
+                                 </div>
+                             </div>
+                            <div align="right" style="bottom:-5px">
+                                <span style="color:grey">Last Updated: 4:35PM</span>    
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="jumbotron">
+                            <h1>70% Left</h1>                            
+                            <p><a class="btn btn-primary btn-lg">23/105 GB utilized</a></p>
+                            <div align="right">
+                                <span style="color:grey">Last Updated: 4:35PM</span>    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <!--<div class="col-sm-4">
+                        <div class="panel panel-info">
+                            <div class="panel-heading">Today in History</div>
+                            <ul class="list-group">
+                                <li class="list-group-item"><p>It showed a lady fitted out with a fur hat and fur 
+                                    boa who sat upright, raising a heavy fur muff that 
+                                    covered the whole of her lower arm towards the 
+                                    viewer.</p>
+                                </li>                                
+                            </ul>
+                        </div>
+                    </div>-->
+                    <div class="col-sm-6">
+                        <div class="panel panel-success">
+                            <div class="panel-heading">Updates</div>
+                            <div class="panel-body"> 
+								<ul class="list-group">
+									 <li class="list-group-item">[9:15AM]:Reached Office...</li>
+									<li class="list-group-item">[4:15PM]:Leaving for Office...</li>
+									<li class="list-group-item">[5:15AM]:Reached Home...</li>
+									<li class="list-group-item">[5:15AM]:Reached Home...</li>   
+									<li class="list-group-item">[5:15AM]:Reached Home...</li>   
+									<li class="list-group-item">[5:15AM]:Reached Home...</li>   
+								</ul>
+							</div>	
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="panel panel-warning">
+                            <div class="panel-heading">Calendar</div>
+							<div class="panel-body"> 							
+								<ul class="list-group">
+									<li class="list-group-item">18-Sep: Amit's B'day Today</li>
+									<li class="list-group-item">18-Sep: Bill Pay - BSNL Landline</li>
+									<li class="list-group-item">20-Sep: Bill Pay - BESCOM</li>
+									<li class="list-group-item">20-Sep: Bill Pay - BESCOM</li>
+									<li class="list-group-item">20-Sep: Bill Pay - BESCOM</li>
+									<li class="list-group-item">20-Sep: Bill Pay - BESCOM</li>
+									<li class="list-group-item">20-Sep: Bill Pay - BESCOM</li>
+									<li class="list-group-item">20-Sep: Bill Pay - BESCOM</li>
+									<li class="list-group-item">20-Sep: Bill Pay - BESCOM</li>
+									<li class="list-group-item">20-Sep: Bill Pay - BESCOM</li>
+									<li class="list-group-item">20-Sep: Bill Pay - BESCOM</li>
+									<li class="list-group-item">20-Sep: Bill Pay - BESCOM</li>
+									<li class="list-group-item">20-Sep: Bill Pay - BESCOM</li>
+								</ul>
+							</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">News Feed<span class="pull-right"><i class="fa fa-refresh"></i></div>
+								<div class="panel-body"> 
+									<table class="table table-condensed">
+										<tr><td>[7:30AM]: Lorem ipsum dolor sit amet, consectetuer adipiscing 
+										  elit. Aenean commodo ligula eget dolor. Aenean 
+										  massa.</td></tr>
+										<tr><td>[7:30AM]: Cum sociis natoque penatibus et magnis dis 
+										parturient montes, nascetur ridiculus mus. Donec quam 
+										felis, ultricies nec, pellentesque eu, pretium quis, 
+										sem.</td></tr>
+										<tr><td>[7:30AM]: Nulla consequat massa quis enim. Donec pede justo, 
+										fringilla vel, aliquet nec, vulputate eget, arcu.</td></tr>
+										<tr><td>[7:30AM]: In enim justo, rhoncus ut, imperdiet a, venenatis 
+										vitae, justo. Nullam dictum felis eu pede mollis 
+										pretium. Integer tincidunt.</td></tr>
+									</table>                                
+								</div>
+                            </div>  
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </main>
+    </body>
+
+</html>
