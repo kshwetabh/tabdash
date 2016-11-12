@@ -2,6 +2,9 @@ from flask import Flask, render_template, request, jsonify
 import json
 from weather_forecast import getForecastData
 from airtel_smartbytes import getSmartByteData
+from google_cal import getCalendarAppointments
+from flask import Response
+from json import dumps
 
 app = Flask(__name__)
 
@@ -25,6 +28,15 @@ def smartbytes():
 def weather():
     weatherForecast = getForecastData()
     return jsonify(temperature=weatherForecast["temperature"], icon=weatherForecast["icon"], summary=weatherForecast["summary"])
+
+
+
+@app.route("/gcalappts")
+def getCalAppts():
+    calAppts = getCalendarAppointments()
+    return Response(json.dumps(calAppts),  mimetype='application/json') #json.dumps(calAppts)
+
+
 
 
 if __name__ == "__main__":

@@ -28,7 +28,9 @@ $(function () {
 		$.ajax({
 			url: '/smartbytes', 
 			success: function(data) {
-				$('#pct_left').html(data.remaining_pct + "% Left");
+				$('#smartbytes_rem_pct').html(data.remaining_pct);
+				$('#smartbytes_used').html(105-data.remaining_data);
+				$('#smartbytes_daysleft').html(data.remaining_days);
 			},
 			complete: function() {
 				// Schedule the next request when the current one's complete
@@ -52,7 +54,26 @@ $(function () {
 		});
 	})();
 
+	(function worker() {
+		$.ajax({
+			url: '/gcalappts',
+			success: function(data) {
+				var li = '';
+				for (var i=0; i < data.length; i++) {
+					li += '<li class="list-group-item">'+data[i].date+": "+ data[i].summary +'</li>';
+				}
+				$('<li />', {html: li}).appendTo('#calendar_events')
+								
+				console.log(data);
+				//$('#curr_temp').html(data.temperature + "&deg;C");
+			},
+			complete: function() {
+				// Schedule the next request when the current one's complete
+				//Refresh every 2hr
+				setTimeout(worker, 7200000);
+			}
+		});
+	})();
 
 
-	
 });

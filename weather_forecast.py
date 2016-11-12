@@ -1,9 +1,9 @@
 import forecastio
 
 def getForecastData():
-    api_key = ""
+    api_key = "8f79661fe2a618c388fcf2942839c428"
     lat = 12.8695687
-    lng = 67.5318274
+    lng = 77.5318274
     forecast_obj = {}
 
     forecast = forecastio.load_forecast(api_key, lat, lng)

@@ -37,3 +37,8 @@ main {
     padding-left: 0px;
     padding-right:0px;
 }
+
+tspan{
+  fill: white;
+  font-weight: bold
+}

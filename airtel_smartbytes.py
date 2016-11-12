@@ -15,7 +15,7 @@ def getSmartByteData():
     remaining["remaining_days"] = re.sub("[^0-9]", "", gb_data[2].text)
     remaining["remaining_pct"] = format(float(remaining["remaining_data"]) * 100/ 105, '.0f')
 
-    # print remaining
+    print remaining
     return remaining
 
 # getSmartByteData()
